@@ -1,7 +1,6 @@
 plugins {
     id("com.android.library")
     id("org.jetbrains.kotlin.android")
-    `maven-publish`
 }
 
 android {
@@ -45,18 +44,4 @@ dependencies {
     // Nos testes JVM a documentação oficial do Android recomenda a artefato real:
     testImplementation("org.json:json:20240303")
     testImplementation(kotlin("test"))
-}
-
-// Publicação via JitPack (a coordenada final é com.github.SystemOverclock:lighthouse-north-android)
-afterEvaluate {
-    publishing {
-        publications {
-            create<MavenPublication>("release") {
-                from(components["release"])
-                groupId = "com.github.SystemOverclock"
-                artifactId = "lighthouse-north-android"
-                version = "0.2.0"
-            }
-        }
-    }
 }
