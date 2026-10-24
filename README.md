@@ -48,7 +48,7 @@ In your Lighthouse North dashboard: **Apps → Keys**. The key looks like `ak_..
 val client = LighthouseNorthClient.getInstance(context)
 client.init(
     appKey = "ak_...",
-    apiBaseUrl = "https://api.lighthousenorth.com.br",
+    apiBaseUrl = "https://lighthousenorth.com.br",
 )
 ```
 
