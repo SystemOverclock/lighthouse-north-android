@@ -1,6 +1,7 @@
 plugins {
     id("com.android.library")
     id("org.jetbrains.kotlin.android")
+    `maven-publish`
 }
 
 android {
@@ -23,6 +24,12 @@ android {
     testOptions {
         unitTests.all { it.useJUnit() }
     }
+
+    publishing {
+        singleVariant("release") {
+            withSourcesJar()
+        }
+    }
 }
 
 dependencies {
@@ -40,14 +47,14 @@ dependencies {
     testImplementation(kotlin("test"))
 }
 
-// Publicação Maven Central (preparação — publica após criar conta Sonatype)
+// Publicação via JitPack (a coordenada final é com.github.SystemOverclock:lighthouse-north-android)
 afterEvaluate {
     publishing {
         publications {
             create<MavenPublication>("release") {
                 from(components["release"])
-                groupId = "com.lighthousenorth"
-                artifactId = "client-android"
+                groupId = "com.github.SystemOverclock"
+                artifactId = "lighthouse-north-android"
                 version = "0.2.0"
             }
         }
