@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- SDK Android nativo (codinome) — namespace declarado no build.gradle.kts.
+
+     PERMISSÕES: apenas INTERNET (normal, merged no host; 99% dos apps já a
+     declaram). POST_NOTIFICATIONS é RUNTIME e responsabilidade do HOST —
+     um push SDK não deve injetar permissão de runtime silenciosamente no
+     manifest do app cliente (checklist de integração no README). -->
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+</manifest>

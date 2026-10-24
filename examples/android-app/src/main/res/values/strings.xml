@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">LighthouseNorth SDK — exemplo (codinome)</string>
+    <string name="section_config">Configuração (do painel do tenant — nunca hardcode)</string>
+    <string name="hint_app_key">App key (ak_…) — painel Apps → Chaves</string>
+    <string name="hint_base_url">API base URL (emulador: http://10.0.2.2:3000)</string>
+    <string name="hint_contact_ref">contactRef (external_id do contato — opcional)</string>
+    <string name="switch_fake_transport">Transporte fake (demo sem rede — dev)</string>
+    <string name="btn_register">Ativar push (opt-in + consentimento)</string>
+    <string name="btn_opt_out">Desativar push (opt-out — revoga consentimento)</string>
+    <string name="section_state">Estado do SDK</string>
+    <string name="section_log">Eventos do SDK (log estruturado)</string>
+    <string name="footer_note">Codinome — nome de publicação a definir. O SDK coleta apenas platform/token/contactRef/consent (minimização LGPD) e não renderiza conteúdo de push (plain-text por construção). Token: FakeTokenProvider até o Firebase do host existir.</string>
+</resources>

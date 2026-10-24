@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- INTERNET já vem do manifest da library (merge). POST_NOTIFICATIONS é
+         responsabilidade do HOST (checklist de integração do README do SDK).
+
+         usesCleartextTraffic: APENAS para o modo dev do example (API local em
+         http://localhost:3000 via adb reverse — o SDK é TLS-only e só aceita
+         http em loopback). Apps de PRODUÇÃO usam https e NÃO precisam disto. -->
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+
+    <application
+        android:label="@string/app_name"
+        android:icon="@android:drawable/sym_def_app_icon"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true"
+        android:allowBackup="false">
+
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
